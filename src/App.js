@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function PasswordKeeper() {
+function App() {
   //
   const [passwords, setPasswords] = useState([]);
   const [newPassword, setNewPassword] = useState("");
@@ -77,6 +77,8 @@ function PasswordKeeper() {
     }
   };
 
+  // only display those that indludes searchTerm password after converting password.title in lowercase
+
   const filteredPasswords = passwords.filter((password) =>
     password.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -130,4 +132,4 @@ function PasswordKeeper() {
   );
 }
 
-export default PasswordKeeper;
+export default App;
